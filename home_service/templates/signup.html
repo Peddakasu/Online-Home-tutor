@@ -1,12 +1,12 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block body %}
-{% ifequal error "create" %}
+{% if error == "create" %}
 <script>
     alert('Registration Successful');
     window.location=('{% url 'login' %}');
 </script>
-{% endifequal %}
+{% endif %}
 	<!-- //header -->
 
 	<!-- banner -->

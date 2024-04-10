@@ -51,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </li>
         {% else %}
         {% if request.user.username %}
-        {% ifequal error "pat" %}
+        {% if error == "pat" %}
         <li class="nav-item ">
         <a class="nav-link" style = "color : black" href="{% url 'user_home' %}">
            <i class="fa fa-home"></i> Home</a>
@@ -112,7 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
         </div>
       </li>
-        {% endifequal %}
+        {% endif %}
 
         {% else %}
         <li class="nav-item ">
